@@ -52,6 +52,10 @@ shell="$(
 				"3.6", # April 2021
 				"4.0", # April 2022
 				"4.2", # April 2023
+				"4.4", # February 2024
+				"6.0", # July 31, 2025
+				"7.0", # not interested in
+				"8.0", # not interested in
 				empty
 			] | index($v) | not)
 
@@ -184,12 +188,12 @@ for version in "${versions[@]}"; do
 					msi: env.msiUrl,
 					sha256: env.msiSha256,
 					variants: [
-						"windowsservercore-ltsc2025",
-						"windowsservercore-ltsc2022",
-						"windowsservercore-1809",
+						#"windowsservercore-ltsc2025",
+						#"windowsservercore-ltsc2022",
+						#"windowsservercore-1809",
 						#"nanoserver-ltsc2025", # The command "cmd /S /C mongod --version" returned a non-zero code: 3221225785
-						"nanoserver-ltsc2022",
-						"nanoserver-1809"
+						#"nanoserver-ltsc2022",
+						#"nanoserver-1809"
 					],
 					features: ([
 						# https://github.com/mongodb/mongo/blob/r6.0.0/src/mongo/installer/msi/wxs/FeatureFragment.wxs#L9-L85 (no Client)
